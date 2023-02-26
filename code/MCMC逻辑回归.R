@@ -1,0 +1,7 @@
+s <- read.table('D:\\Rsoftware\\R软件习题数据\\exercise2_10.txt')
+x1 <- c(s[,2])
+x2 <- c(s[,3])
+x3 <- c(s[,4])
+y <- c(s[,5])
+mcmcfinan <- MCMClogit(y~x1+x2+x3,data = as.data.frame(cbind(x1,x2,x3,y)))
+plot(mcmcfinan)
